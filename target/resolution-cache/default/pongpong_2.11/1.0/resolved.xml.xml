@@ -4,7 +4,7 @@
 		module="pongpong_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150807235535"
+		publication="20150808142936"
 	>
 		<description>
 		PongPong
@@ -33,5 +33,6 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.7" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.7" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.4-SNAPSHOT" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-remote_2.11" rev="2.4-SNAPSHOT" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

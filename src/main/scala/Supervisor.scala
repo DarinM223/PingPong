@@ -1,9 +1,14 @@
-import akka.actor.{Props, Actor}
+import akka.actor.{ActorRef, Props, Actor}
 
 class Supervisor extends Actor {
   import akka.actor.OneForOneStrategy
   import akka.actor.SupervisorStrategy._
   import scala.concurrent.duration._
+
+  val pong = context.actorOf(Props(new Pong(self)), "pong")
+  val ping = context.actorOf(Props(new Ping(pong, self)), "ping")
+
+  var actors = List[ActorRef]()
 
   // Limit maximum number of restarts due to errors to 10
   override val supervisorStrategy =
@@ -12,6 +17,11 @@ class Supervisor extends Actor {
     }
 
   def receive = {
-    case (p: Props, name: String) => sender ! context.actorOf(p, name)
+    case Message.Start => ping ! Message.Start
+    case Message.Register(actor) => actors = actor :: actors
+
+    // Broadcast Ping and Pong messages to registered actors
+    case Message.Ping => actors.foreach(_ ! Message.Ping)
+    case Message.Pong => actors.foreach(_ ! Message.Pong)
   }
 }

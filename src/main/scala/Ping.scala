@@ -1,15 +1,18 @@
 import akka.actor._
 
-class Ping(pong: ActorRef) extends Actor {
+class Ping(pong: ActorRef, supervisor: ActorRef) extends Actor {
 
   // Internal count for incrementing
   var count = 0
 
-  def incrementAndPrint { count += 1; println("ping") }
+  def incrementAndPrint {
+    count += 1
+    supervisor ! Message.Ping
+  }
 
   override def postRestart(reason: Throwable) = {
     super.postRestart(reason)
-    println("Foo!")
+    println("Restarted!")
     pong ! Message.Ping
   }
 

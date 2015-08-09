@@ -7,8 +7,80 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150807235539"/>
+		date="20150808161040"/>
 	<dependencies>
+		<module organisation="com.typesafe.akka" name="akka-remote_2.11">
+			<revision name="2.4-SNAPSHOT" status="integration" pubdate="20150805140334" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3855" time="0" location="/Users/darin/.ivy2/cache/com.typesafe.akka/akka-remote_2.11/ivy-2.4-SNAPSHOT.xml" searched="true" origin-is-local="false" origin-location="http://repo.akka.io/snapshots/com/typesafe/akka/akka-remote_2.11/2.4-SNAPSHOT/akka-remote_2.11-2.4-SNAPSHOT.pom"/>
+				<caller organisation="default" name="pongpong$sources_javadoc_2.11" conf="compile-internal, compile, provided, optional" rev="2.4-SNAPSHOT" rev-constraint-default="2.4-SNAPSHOT" rev-constraint-dynamic="2.4-SNAPSHOT" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="akka-remote_2.11" type="jar" ext="jar" status="no" details="" size="1346014" time="0" location="/Users/darin/.ivy2/cache/com.typesafe.akka/akka-remote_2.11/jars/akka-remote_2.11-2.4-SNAPSHOT.jar">
+						<origin-location is-local="false" location="http://repo.akka.io/snapshots/com/typesafe/akka/akka-remote_2.11/2.4-SNAPSHOT/akka-remote_2.11-2.4-SNAPSHOT.jar"/>
+					</artifact>
+					<artifact name="akka-remote_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="146128" time="0" location="/Users/darin/.ivy2/cache/com.typesafe.akka/akka-remote_2.11/srcs/akka-remote_2.11-2.4-SNAPSHOT-sources.jar">
+						<origin-location is-local="false" location="http://repo.akka.io/snapshots/com/typesafe/akka/akka-remote_2.11/2.4-SNAPSHOT/akka-remote_2.11-2.4-SNAPSHOT-sources.jar"/>
+					</artifact>
+					<artifact name="akka-remote_2.11" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1412565" time="0" location="/Users/darin/.ivy2/cache/com.typesafe.akka/akka-remote_2.11/docs/akka-remote_2.11-2.4-SNAPSHOT-javadoc.jar">
+						<origin-location is-local="false" location="http://repo.akka.io/snapshots/com/typesafe/akka/akka-remote_2.11/2.4-SNAPSHOT/akka-remote_2.11-2.4-SNAPSHOT-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.uncommons.maths" name="uncommons-maths">
+			<revision name="1.2.2a" status="release" pubdate="20110408095605" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maths.uncommons.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2727" time="0" location="/Users/darin/.ivy2/cache/org.uncommons.maths/uncommons-maths/ivy-1.2.2a.xml" searched="false" origin-is-local="false" origin-location="file:/usr/local/Cellar/typesafe-activator/1.2.7/libexec/repository/org.uncommons.maths/uncommons-maths/1.2.2a/ivys/ivy.xml"/>
+				<caller organisation="default" name="pongpong$sources_javadoc_2.11" conf="compile-internal, compile, provided, optional" rev="1.2.2a" rev-constraint-default="1.2.2a" rev-constraint-dynamic="1.2.2a" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="uncommons-maths" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="61093" time="0" location="/Users/darin/.ivy2/cache/org.uncommons.maths/uncommons-maths/srcs/uncommons-maths-1.2.2a-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a-sources.jar"/>
+					</artifact>
+					<artifact name="uncommons-maths" type="jar" ext="jar" status="no" details="" size="49019" time="0" location="/Users/darin/.ivy2/cache/org.uncommons.maths/uncommons-maths/jars/uncommons-maths-1.2.2a.jar">
+						<origin-location is-local="false" location="file:/usr/local/Cellar/typesafe-activator/1.2.7/libexec/repository/org.uncommons.maths/uncommons-maths/1.2.2a/jars/uncommons-maths.jar"/>
+					</artifact>
+					<artifact name="uncommons-maths" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="158263" time="0" location="/Users/darin/.ivy2/cache/org.uncommons.maths/uncommons-maths/docs/uncommons-maths-1.2.2a-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.netty" name="netty">
+			<revision name="3.10.3.Final" status="release" pubdate="20150508083154" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="7071" time="0" location="/Users/darin/.ivy2/cache/io.netty/netty/ivy-3.10.3.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty/3.10.3.Final/netty-3.10.3.Final.pom"/>
+				<caller organisation="default" name="pongpong$sources_javadoc_2.11" conf="compile-internal, compile, provided, optional" rev="3.10.3.Final" rev-constraint-default="3.10.3.Final" rev-constraint-dynamic="3.10.3.Final" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="netty" type="jar" ext="jar" status="no" details="" size="1324704" time="0" location="/Users/darin/.ivy2/cache/io.netty/netty/jars/netty-3.10.3.Final.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty/3.10.3.Final/netty-3.10.3.Final.jar"/>
+					</artifact>
+					<artifact name="netty" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="3373805" time="0" location="/Users/darin/.ivy2/cache/io.netty/netty/docs/netty-3.10.3.Final-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty/3.10.3.Final/netty-3.10.3.Final-javadoc.jar"/>
+					</artifact>
+					<artifact name="netty" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1149046" time="0" location="/Users/darin/.ivy2/cache/io.netty/netty/srcs/netty-3.10.3.Final-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty/3.10.3.Final/netty-3.10.3.Final-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.protobuf" name="protobuf-java">
+			<revision name="2.5.0" status="release" pubdate="20130307191811" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/protobuf" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
+				<license name="New BSD license" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2984" time="0" location="/Users/darin/.ivy2/cache/com.google.protobuf/protobuf-java/ivy-2.5.0.xml" searched="false" origin-is-local="false" origin-location="file:/usr/local/Cellar/typesafe-activator/1.2.7/libexec/repository/com.google.protobuf/protobuf-java/2.5.0/ivys/ivy.xml"/>
+				<caller organisation="default" name="pongpong$sources_javadoc_2.11" conf="compile-internal, compile, provided, optional" rev="2.5.0" rev-constraint-default="2.5.0" rev-constraint-dynamic="2.5.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="protobuf-java" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="276990" time="0" location="/Users/darin/.ivy2/cache/com.google.protobuf/protobuf-java/srcs/protobuf-java-2.5.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0-sources.jar"/>
+					</artifact>
+					<artifact name="protobuf-java" type="jar" ext="jar" status="no" details="" size="533455" time="0" location="/Users/darin/.ivy2/cache/com.google.protobuf/protobuf-java/jars/protobuf-java-2.5.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar"/>
+					</artifact>
+					<artifact name="protobuf-java" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1212478" time="0" location="/Users/darin/.ivy2/cache/com.google.protobuf/protobuf-java/docs/protobuf-java-2.5.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="com.typesafe.akka" name="akka-actor_2.11">
 			<revision name="2.4-SNAPSHOT" status="integration" pubdate="20150805140147" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>

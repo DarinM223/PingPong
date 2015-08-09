@@ -1,9 +1,9 @@
 import akka.actor._
 
-class Pong extends Actor {
+class Pong(supervisor: ActorRef) extends Actor {
   def receive = {
     case Message.Ping =>
-      println(" pong")
+      supervisor ! Message.Pong
       sender ! Message.Pong
     case Message.Stop =>
       println("Pong stopped")
