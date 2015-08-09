@@ -1,7 +1,10 @@
-import akka.actor._
+package d_m.remote
 
-import java.io.File
+import akka.actor.{ActorSystem, Props}
 
+/**
+ * Created by darin on 8/8/15.
+ */
 object PingPongRemote extends App {
   import com.typesafe.config.ConfigFactory
 

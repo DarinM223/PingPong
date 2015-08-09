@@ -1,3 +1,5 @@
+package d_m.shared
+
 import akka.actor.ActorRef
 
 object Message {

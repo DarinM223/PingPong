@@ -1,4 +1,7 @@
+package d_m.remote
+
 import akka.actor._
+import d_m.shared.Message
 
 class Ping(pong: ActorRef, supervisor: ActorRef) extends Actor {
 
@@ -28,7 +31,7 @@ class Ping(pong: ActorRef, supervisor: ActorRef) extends Actor {
         sender ! Message.Ping
       }
     case Message.Stop =>
-      println("Ping stopped")
+      println("d_m.remote.Ping stopped")
       context.stop(self)
   }
 }
